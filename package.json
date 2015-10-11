@@ -1,0 +1,26 @@
+{
+  "name": "neo-url",
+  "version": "1.0.0",
+  "description": "url parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ouonet/neo-url.git"
+  },
+  "keywords": [
+    "url",
+    "parser"
+  ],
+  "author": "liang.gong@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ouonet/neo-url/issues"
+  },
+  "homepage": "https://github.com/ouonet/neo-url#readme",
+  "dependencies": {
+    "neo-gbk": "git+https://github.com/ouonet/neo-gbk.git"
+  }
+}
