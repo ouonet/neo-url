@@ -4,7 +4,8 @@
   "description": "url parser",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "browserify index.js -o dist/neo-url.js"
   },
   "repository": {
     "type": "git",
