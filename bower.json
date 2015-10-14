@@ -1,0 +1,28 @@
+{
+  "name": "neo-url",
+  "main": "dist/neo-gbk.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ouonet/neo-url",
+  "authors": [
+    "neo <liang.gong@gmail.com>"
+  ],
+  "description": "URL parser with decoding param by GBK or UTF8",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "url",
+    "parser",
+    "gbk",
+    "javascript",
+    "library"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
