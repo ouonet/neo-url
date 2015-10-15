@@ -114,5 +114,5 @@ MyUrl.prototype = {
         }
         return -1;
     }
-}
+};
 module.exports=MyUrl;

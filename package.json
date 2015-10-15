@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "build": "browserify index.js -o dist/neo-url.js"
+    "build": "browserify index.js -s NeoUrl -o dist/neo-url.js"
   },
   "repository": {
     "type": "git",
