@@ -1,15 +1,15 @@
 {
-  "name": "neo-url",
+  "name": "neo_url",
   "version": "1.0.0",
   "description": "url parser",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "build": "browserify index.js -s NeoUrl -o dist/neo-url.js"
+    "build": "browserify index.js -s neo_url -o dist/neo_url.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ouonet/neo-url.git"
+    "url": "git+https://github.com/ouonet/neo_url.git"
   },
   "keywords": [
     "url",
@@ -18,10 +18,10 @@
   "author": "liang.gong@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ouonet/neo-url/issues"
+    "url": "https://github.com/ouonet/neo_url/issues"
   },
-  "homepage": "https://github.com/ouonet/neo-url#readme",
+  "homepage": "https://github.com/ouonet/neo_url#readme",
   "dependencies": {
-    "neo-gbk": "git+https://github.com/ouonet/neo-gbk.git"
+    "neo_gbk": "git+https://github.com/ouonet/neo_gbk.git"
   }
 }

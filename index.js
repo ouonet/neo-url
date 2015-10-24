@@ -9,7 +9,7 @@
  @param url
  @param charset 字符集，可选UTF-8,GBK,必须大写
  */
-var URLGBK=require('neo-gbk');
+var URLGBK=require('neo_gbk');
 function MyUrl(url, charset) {
     this.init();
     this.setUrl(url, charset);
