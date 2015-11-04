@@ -85,7 +85,7 @@ MyUrl.prototype = {
             var regParam = /([^?&=#]*?)=([^?&=#]*)/g;
             var res;
             while ((res = regParam.exec(paramStr), res != null)) {
-                this.param[res[1]] = this.charset == 'UTF-8' ? decodeURIComponent(unescape(res[2])) : URLGBK.decode(unescape(res[2]));
+                this.param[res[1]] = this.charset == 'UTF-8' ? decodeURIComponent(res[2]) : URLGBK.decode(res[2]);
             }
         } else {
             this.path = path1;
