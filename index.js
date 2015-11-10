@@ -9,7 +9,7 @@
  @param url
  @param charset 字符集，可选UTF-8,GBK,必须大写
  */
-var URLGBK=require('neo_gbk');
+var URLGBK = require('neo_gbk');
 function MyUrl(url, charset) {
     this.init();
     this.setUrl(url, charset);
@@ -57,7 +57,7 @@ MyUrl.prototype = {
 
         var res = url.split(/:\/\//);
         this.protocol = res[0];
-        res[1]=res[1].replace(/\/{2,}/g,'/');//消除多余的/
+        res[1] = res[1].replace(/\/{2,}/g, '/');//消除多余的/
         var i = this.indexOfMutli(res[1], ['/', '?', '#']);
         var host1 = res[1];
         var path1 = "";
@@ -85,7 +85,13 @@ MyUrl.prototype = {
             var regParam = /([^?&=#]*?)=([^?&=#]*)/g;
             var res;
             while ((res = regParam.exec(paramStr), res != null)) {
-                this.param[res[1]] = this.charset == 'UTF-8' ? decodeURIComponent(res[2]) : URLGBK.decode(res[2]);
+                var pat;
+                try {
+                    pat = this.charset == 'UTF-8' ? decodeURIComponent(res[2]) : URLGBK.decode(res[2]);
+                } catch (e) {
+                    pat = decodeURIComponent(res[2]);
+                }
+                this.param[res[1]] = pat;
             }
         } else {
             this.path = path1;
@@ -115,4 +121,4 @@ MyUrl.prototype = {
         return -1;
     }
 };
-module.exports=MyUrl;
+module.exports = MyUrl;
