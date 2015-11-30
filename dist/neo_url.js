@@ -90,7 +90,7 @@ MyUrl.prototype = {
                 try {
                     pat = this.charset == 'UTF-8' ? decodeURIComponent(res[2]) : URLGBK.decode(res[2]);
                 } catch (e) {
-                    pat = decodeURIComponent(res[2]);
+                    pat = res[2];
                 }
                 this.param[res[1]] = pat;
             }
