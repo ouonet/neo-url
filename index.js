@@ -9,7 +9,6 @@
  @param url
  @param charset 字符集，可选UTF-8,GBK,必须大写
  */
-var URLGBK = require('neo_gbk');
 function MyUrl(url, charset) {
     this.init();
     this.setUrl(url, charset);
@@ -24,7 +23,7 @@ MyUrl.prototype = {
     toString: function () {
         var params = [];
         for (var key in this.param) {
-            params.push(key + '=' + (this.charset == 'UTF-8' ? encodeURIComponent(this.param[key]) : URLGBK.encode(this.param[key])));
+            params.push(key + '=' + this.param[key]);
         }
         return this.protocol + '://' + this.host + (this.port == "80" ? "" : ":" + this.port)
             + "/" + this.path + (params.length == 0 ? "" : "?" + params.join("&"))
@@ -86,11 +85,7 @@ MyUrl.prototype = {
             var res;
             while ((res = regParam.exec(paramStr), res != null)) {
                 var pat;
-                try {
-                    pat = this.charset == 'UTF-8' ? decodeURIComponent(res[2]) : URLGBK.decode(res[2]);
-                } catch (e) {
-                    pat = res[2];
-                }
+                pat = res[2];
                 this.param[res[1]] = pat;
             }
         } else {

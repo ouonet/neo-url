@@ -1,7 +1,7 @@
 {
   "name": "neo_url",
   "main": "dist/neo_url.js",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "homepage": "https://github.com/ouonet/neo_url",
   "authors": [
     "neo <liang.gong@gmail.com>"
